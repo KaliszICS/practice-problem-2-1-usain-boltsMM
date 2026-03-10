@@ -1,6 +1,8 @@
 class Notes {
 	public static void main(String args[]) { //this is a function
-		System.out.println(add(3, 5));
+		int num1 = 3;
+		System.out.println(add(num1, 5));
+		num1 = add(num1, 5);//this would change num1
 		// System.out.println(add(2.5, 3)); //doesn't work because the argument and parameter data types don't match.
 		System.out.println(addS("Hello"));
 	}
@@ -11,6 +13,7 @@ class Notes {
 
 	public static int add(int num1, int num2) { //static is what makes this a function.  In other words it doesn't need an object to run
 		int result;
+		num1 = 5; //outside is unaffected
 		result = num1 + num2;
 		return result;		
 	}
